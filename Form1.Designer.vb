@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -49,10 +50,11 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI Black", 21.75F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = SystemColors.HotTrack
         Label1.Location = New Point(272, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(377, 40)
+        Label1.Size = New Size(392, 40)
         Label1.TabIndex = 0
         Label1.Text = "FLIGHT BOOKING SYSTEM"
         ' 
@@ -98,40 +100,49 @@ Partial Class Form1
         ' 
         ' txtFullName
         ' 
-        txtFullName.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        txtFullName.BackColor = Color.Blue
+        txtFullName.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtFullName.ForeColor = SystemColors.Window
         txtFullName.Location = New Point(186, 88)
         txtFullName.Name = "txtFullName"
-        txtFullName.Size = New Size(321, 23)
+        txtFullName.Size = New Size(321, 25)
         txtFullName.TabIndex = 5
         ' 
         ' txtPhoneNumber
         ' 
-        txtPhoneNumber.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        txtPhoneNumber.BackColor = Color.Blue
+        txtPhoneNumber.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtPhoneNumber.ForeColor = SystemColors.Window
         txtPhoneNumber.Location = New Point(186, 176)
         txtPhoneNumber.Name = "txtPhoneNumber"
-        txtPhoneNumber.Size = New Size(321, 23)
+        txtPhoneNumber.Size = New Size(321, 25)
         txtPhoneNumber.TabIndex = 6
         ' 
         ' txtAge
         ' 
-        txtAge.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        txtAge.BackColor = Color.Blue
+        txtAge.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtAge.ForeColor = SystemColors.Window
         txtAge.Location = New Point(186, 139)
         txtAge.Name = "txtAge"
-        txtAge.Size = New Size(321, 23)
+        txtAge.Size = New Size(321, 25)
         txtAge.TabIndex = 7
         ' 
         ' txtTgA
         ' 
-        txtTgA.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        txtTgA.BackColor = Color.Blue
+        txtTgA.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtTgA.ForeColor = SystemColors.Window
         txtTgA.Location = New Point(186, 264)
         txtTgA.Name = "txtTgA"
-        txtTgA.Size = New Size(39, 23)
+        txtTgA.Size = New Size(39, 25)
         txtTgA.TabIndex = 8
         ' 
         ' btnIssueReceipt
         ' 
         btnIssueReceipt.BackColor = Color.FromArgb(CByte(0), CByte(0), CByte(192))
         btnIssueReceipt.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnIssueReceipt.ForeColor = SystemColors.ControlLightLight
         btnIssueReceipt.Location = New Point(409, 512)
         btnIssueReceipt.Name = "btnIssueReceipt"
         btnIssueReceipt.Size = New Size(142, 34)
@@ -141,8 +152,9 @@ Partial Class Form1
         ' 
         ' cmbDestination
         ' 
-        cmbDestination.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        cmbDestination.BackColor = Color.Blue
         cmbDestination.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmbDestination.ForeColor = SystemColors.Window
         cmbDestination.FormattingEnabled = True
         cmbDestination.Items.AddRange(New Object() {"Rome, Italy", "Kyoto, Japan", "Cairo, Egypt", "London, UK", "Paris, France", "Cape Town, South Africa", "Lisbon, Portugal", "Sydney, Australia", "New York, USA", "California, USA", "Nairobi, Kenya", "Tel Aviv, Israel", "Mosow, Russia", "Kyiv, Ukraine", "Warsaw, Poland", "Istanbul, Turkyie", "Barcalona, Spain", "Ontario, Canada"})
         cmbDestination.Location = New Point(602, 88)
@@ -172,10 +184,12 @@ Partial Class Form1
         ' 
         ' txtCityOfOrigin
         ' 
-        txtCityOfOrigin.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        txtCityOfOrigin.BackColor = Color.Blue
+        txtCityOfOrigin.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtCityOfOrigin.ForeColor = SystemColors.Window
         txtCityOfOrigin.Location = New Point(186, 231)
         txtCityOfOrigin.Name = "txtCityOfOrigin"
-        txtCityOfOrigin.Size = New Size(185, 23)
+        txtCityOfOrigin.Size = New Size(185, 25)
         txtCityOfOrigin.TabIndex = 13
         ' 
         ' dtpDeparture
@@ -251,8 +265,9 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackgroundImage = My.Resources.Resources.cool_abstract_ks1hlkjp0br3oluh
-        ClientSize = New Size(921, 558)
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(962, 578)
         Controls.Add(dgvTagAlongs)
         Controls.Add(lblPickTravelClass)
         Controls.Add(radEconomy)
